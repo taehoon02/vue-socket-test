@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<div id="app">
+  <h1>{{title}}</h1>
+</div>
+<script>
+  let socket = io.connect();
+  socket.on('stream', function(data){
+    app.title = data.title;
+  });
+
+  var app = new Vue({
+    el: "#app",
+    data: {
+      title: "I'm an even uglier signup page. Fix me!"
+    },
+    methods: {}
+  })
+</script>
+
+</html>

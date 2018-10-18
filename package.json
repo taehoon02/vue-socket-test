@@ -1,0 +1,9 @@
+{
+  "name": "vue-socket-test",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "^2.1.1"
+  }
+}
